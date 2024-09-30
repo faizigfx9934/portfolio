@@ -13,8 +13,8 @@
 
 @font-face {
   font-family: 'Druk'; /* Name your font family */
-  src: url('/public_html/DrukWideBold.ttf'); /* Locate the .ttf file within your directory*/
-  src: url('/public_html/proxima.otf');
+  src: url('/DrukWideBold.ttf'); /* Locate the .ttf file within your directory*/
+  src: url('/proxima.otf');
   font-family: 'proxima';
 }
 
