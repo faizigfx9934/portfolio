@@ -11,7 +11,9 @@
 }
 
 
-
+ul li{
+  padding-left:0;
+}
 
 p{
   font-family: 'proxima';
