@@ -1,0 +1,1091 @@
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+@font-face {
+  font-family: 'Druk'; /* Name your font family */
+  src: url('/public_html/DrukWideBold.ttf'); /* Locate the .ttf file within your directory*/
+  src: url('/public_html/proxima.otf');
+  font-family: 'proxima';
+}
+
+
+
+p{
+  font-family: 'proxima';
+}
+h1,h2,h3,h4{
+  font-family: 'druk';
+}
+/* Style for the body */
+body {
+  position: relative;
+  min-height: 100vh;
+  /* Ensure it covers the full viewport */
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+  /* Enable vertical scroll snapping */
+  background-color: #000000;
+}
+
+/* Background image */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://faizigfx.sirv.com/Images/back.jpg') center center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* Ensures the image covers the entire background without stretching */
+  z-index: -1;
+  /* Behind content */
+}
+
+/* Glassmorphism effect */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.027);
+  /* Semi-transparent background */
+  backdrop-filter: blur(20px);
+  /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  z-index: 0;
+  /* On top of the background image */
+}
+
+
+/* Ensure the body content is above the background */
+body * {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  overflow: hidden;
+}
+
+.section-bg {
+  background: transparent;
+}
+
+.section-title {
+  padding-bottom: 30px;
+  font-family: 'Druk', sans-serif; /* Use the font family */
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #ffffff;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: greenyellow;
+  bottom: 0;
+  left: 50%; /* Move to the center of the parent */
+  transform: translateX(-50%); /* Offset by half the width of the element */
+}
+
+.section-title p {
+  margin-bottom: 0;
+  color: white;
+}
+
+/* ---------------------------------------------------------
+header
+----------------------------------------------------------- */
+
+
+
+.page-title {
+  padding-bottom: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 20px; /* Rounded corners */
+backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.page-title h2 {
+  font-family: 'druk';
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  color: greenyellow;
+}
+
+.page-title p {
+  margin-bottom: 0;
+  font-size: 17px;
+  color: white;
+}
+
+
+/* ------------------------------social--------------------------------------- */
+
+
+.page-title {
+  padding-bottom: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 20px; /* Rounded corners */
+backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.page-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  color: greenyellow;
+}
+
+.page-title p {
+  margin-bottom: 0;
+  font-size: 17px;
+  color: white;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* Header with Glassmorphism Effect */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.808);
+  /* Semi-transparent background */
+  border-right: 2px solid greenyellow;
+  backdrop-filter: blur(10px);
+  /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  transition: all 0.5s ease-in-out;
+  z-index: 9997;
+  padding: 0 15px;
+  overflow-y: auto;
+}
+
+/* Pseudo-element for the background image */
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://faizigfx.sirv.com/Images/back.jpg') center center no-repeat;
+  background-size: cover;
+  /* Ensures the image covers the entire header */
+  opacity: 0.1;
+  /* Adjust opacity to control the image visibility */
+  z-index: -1;
+  /* Place the image behind the header content */
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid greenyellow;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'druk'
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #272829;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover {
+  background: greenyellow;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 20px greenyellow, 0 0 40px greenyellow, 0 0 60px greenyellow;
+}
+
+
+.second-h{
+  color: greenyellow;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+
+
+.nav-menu {
+  padding: 10px 18px 20px 25px;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: greenyellow;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: greenyellow;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: greenyellow;
+}
+
+/* Mobile Navigation */
+.custom-hamburger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+
+.custom-hamburger img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.custom-hamburger:hover {
+  cursor: url('https://faizigfx.sirv.com/Click.svg'), auto;
+}
+
+.hamburger-close {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .custom-hamburger {
+    display: block;
+  }
+
+  #header {
+    left: -300px;
+    transition: all 0.3s;
+  }
+
+  #header.mobile-nav-active {
+    left: 0;
+  }
+
+  #main {
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+}
+
+#header.mobile-nav-active+.custom-hamburger .hamburger-open {
+  display: none;
+}
+
+#header.mobile-nav-active+.custom-hamburger .hamburger-close {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 0.3s ease-in-out;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+#portfolio,
+#clients {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+
+}
+#clients{
+  min-height: 70vh;
+}
+section{
+  min-height: 100vh;
+}
+@media screen and (min-width: 1400px) {
+
+  #portfolio,
+  #clients {
+    padding-left: 19rem;
+  }
+}
+
+div.gslide-media.gslide-image img {
+  border-radius: 20px;
+}
+
+
+.portfolio .portfolio-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.portfolio .portfolio-info p {
+  font-size: 15px;
+}
+.portfolio .portfolio-filters {
+  padding-top: 5px;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 50px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items */
+  transition: 0.3s ease-in-out ; /* Smooth transition */
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 10px; /* Adjust margins for better spacing */
+  line-height: 2;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Required for dropdown positioning */
+  flex: 1 1 auto; /* Allow items to grow and shrink */
+  text-align: center; /* Center text */
+  cursor: url('https://faizigfx.sirv.com/Click.svg'), auto;
+}
+
+.portfolio .portfolio-filters li:hover {
+  color: greenyellow;
+  transition: 0.3s ease-in-out ; /* Smooth transition */
+  cursor: url('https://faizigfx.sirv.com/Click.svg'), auto;
+}
+
+.portfolio .portfolio-filters li.filter-active {
+  color: greenyellow;
+  transition: 0.3s ease-in-out ; /* Smooth transition */
+}
+.portfolio .portfolio-filters li:active{
+  cursor: url('https://faizigfx.sirv.com/grabing.svg'), grabbing;
+}
+
+.portfolio .portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio .portfolio-filters li:last-child {
+  margin-right: 0; /* Adjusted margin for last child */
+}
+
+/* Media query for mobile adjustments */
+@media (max-width: 768px) {
+  .portfolio .portfolio-filters {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center; /* Center items horizontally */
+  }
+  .portfolio .portfolio-filters li {
+      flex: 1 0 auto; /* Allow items to take full width */
+      margin: 5px 0; /* Adjust margins for better spacing */
+      padding-right: 37px;
+      padding-left:39px;
+      width: 100%; /* Take full width */
+  }
+}
+
+.portfolio .portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-content img {
+  border-radius: 20px;
+  transition: 0.3s;
+
+}
+
+.portfolio .portfolio-content .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-content .portfolio-info h4 {
+  font-size: 18px;
+  mask-border: 0;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.portfolio .portfolio-content .portfolio-info p {
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  font-size: 26px;
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: greenyellow;
+  cursor: url('https://faizigfx.sirv.com/Click.svg'), auto;
+}
+
+
+.portfolio .portfolio-content .portfolio-info .preview-link:active,
+.portfolio .portfolio-content .portfolio-info .details-link:active {
+  cursor: url('https://faizigfx.sirv.com/grabing.svg'), grabbing;
+}
+
+.portfolio .portfolio-content .portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.portfolio .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-content:hover img {
+  transform: scale(1.1);
+  border-radius: 20px;
+  
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients .swiper-slide:hover{
+  cursor: url('https://faizigfx.sirv.com/grab3.svg'), grab;
+}
+.clients .swiper-slide:active{
+  cursor: url('https://faizigfx.sirv.com/grabing.svg'), grabbing;
+}
+.clients .swiper-slide img {
+  opacity: 0.7;
+  transition: 0.3s;
+  filter: grayscale(100);
+}
+
+.clients .swiper-slide img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.clients .swiper-wrapper {
+  height: auto;
+  
+}
+
+.clients .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: greenyellow;
+  cursor: url('https://faizigfx.sirv.com/Hover%202.svg'), auto;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: white;
+  cursor: url('https://faizigfx.sirv.com/Hover%202.svg'), auto;
+}
+
+.gbtn{
+color: greenyellow;
+}
+
+
+/* /*-------------------------------------------------------------- */
+
+
+.gdesc-inner {
+  display: none;
+}
+
+
+
+
+
+
+/* Style for the Go to Top button */
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: greenyellow;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 2;
+  box-shadow: 0 0 10px greenyellow; /* Initial glow */
+  animation: breathing-glow 2s infinite; /* Add breathing glow animation */
+  transition: 0.3s ease-in-out;
+}
+.go-to-top:hover{
+  background-color: #272829;
+  cursor: url('https://faizigfx.sirv.com/Click.svg'), auto;
+  color: greenyellow;
+}
+.go-to-top:active{
+  cursor: url('https://faizigfx.sirv.com/grabing.svg'), grabbing;
+}
+
+/* Breathing glow animation */
+@keyframes breathing-glow {
+  0% {
+    box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px greenyellow;
+  }
+  50% {
+    box-shadow: 0 0 20px greenyellow, 0 0 40px greenyellow, 0 0 60px greenyellow;
+  }
+  100% {
+    box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px greenyellow;
+  }
+}
+
+
+/* Show the button when it's visible */
+.go-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hidden state */
+.go-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Bottom-Right */
+.go-to-top.bottom-right {
+  position: fixed;
+  bottom: 57px;
+  right: 69px;
+  /* other styles */
+}
+
+
+
+
+/* ---------------------thumbnails------------------------------- */
+
+
+/*--------------------------------------------------------------
+# Thumbnail Section
+--------------------------------------------------------------*/
+#thumbnail,
+#clients {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+#clients {
+  min-height: 50vh;
+}
+
+section {
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 1400px) {
+  #thumbnail,
+  #clients {
+    padding-left: 19rem;
+  }
+}
+
+div.gslide-media.gslide-image img {
+  border-radius: 20px;
+}
+
+.thumbnail .thumbnail-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.thumbnail .thumbnail-info p {
+  font-size: 15px;
+}
+
+.thumbnail .thumbnail-filters {
+  padding-top: 5px;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 20px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items */
+  transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+.thumbnail .thumbnail-filters li {
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 10px; /* Adjust margins for better spacing */
+  line-height: 2;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Required for dropdown positioning */
+  flex: 1 1 auto; /* Allow items to grow and shrink */
+  text-align: center; /* Center text */
+}
+
+.thumbnail .thumbnail-filters li:hover {
+  color: greenyellow;
+  transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+.thumbnail .thumbnail-filters li.filter-active {
+  color: greenyellow;
+  transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+.thumbnail .thumbnail-filters li:first-child {
+  margin-left: 0;
+}
+
+.thumbnail .thumbnail-filters li:last-child {
+  margin-right: 0; /* Adjusted margin for last child */
+}
+
+/* Media query for mobile adjustments */
+@media (max-width: 768px) {
+  .thumbnail .thumbnail-filters {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center; /* Center items horizontally */
+  }
+  .thumbnail .thumbnail-filters li {
+      flex: 1 0 auto; /* Allow items to take full width */
+      margin: 5px 0; /* Adjust margins for better spacing */
+      padding-right: 37px;
+      padding-left: 39px;
+      width: 100%; /* Take full width */
+  }
+}
+
+.thumbnail .thumbnail-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnail .thumbnail-content img {
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.thumbnail .thumbnail-content .thumbnail-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thumbnail .thumbnail-content .thumbnail-info h4 {
+  font-size: 18px;
+  mask-border: 0;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.thumbnail .thumbnail-content .thumbnail-info p {
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.thumbnail .thumbnail-content .thumbnail-info .preview-link,
+.thumbnail .thumbnail-content .thumbnail-info .details-link {
+  font-size: 26px;
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+.thumbnail .thumbnail-content .thumbnail-info .preview-link:hover,
+.thumbnail .thumbnail-content .thumbnail-info .details-link:hover {
+  color: greenyellow;
+}
+
+.thumbnail .thumbnail-content .thumbnail-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.thumbnail .thumbnail-content:hover .thumbnail-info {
+  opacity: 1;
+}
+
+.thumbnail .thumbnail-content:hover img {
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+.social-title {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.social-title h2 {
+  font-family: 'druk';
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding-top: 50px;
+  position: relative;
+  color: #ffffff;
+}
+.social-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: greenyellow;
+  bottom: 0;
+  left: 50%; /* Move to the center of the parent */
+  transform: translateX(-50%); /* Offset by half the width of the element */
+}
+
+.social-title p {
+  margin-bottom: 0;
+  color: white;
+}
+
+
+
+
+
+
+
+/* Style the loading overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background */
+  z-index: 1000; /* Ensure it's on top of everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add animation to fade out the loading overlay */
+.loading-overlay {
+  animation: fadeOut 1s forwards;
+  animation-delay: 3s; /* Wait for the circle animation to complete */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Style the loading animation */
+.loading-animation {
+  width: 50px; /* Adjust the width and height to fit your animation */
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* Add animation to the circular animation */
+.loading-animation svg circle {
+  animation: circleAnimation 3s linear forwards;
+}
+
+@keyframes circleAnimation {
+  0% {
+    stroke-dasharray: 0, 125;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 125, 125;
+    stroke-dashoffset: -125;
+  }
+}
+
+/* Lock the content while animation is running */
+.loading-overlay.active {
+  overflow: hidden;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* Hide the entire page content, including the header and footer, when the loading overlay is active */
+.loading-overlay.active + .page-content {
+  opacity: 0; /* Hide the page content */
+}
+
+/* Show the entire page content, including the header and footer, when the loading overlay is not active */
+.loading-overlay:not(.active) + .page-content {
+  opacity: 1; /* Show the page content */
+}
+
+
+/* Lock the body element while animation is running */
+.loading-overlay.active ~ * {
+  overflow: hidden; /* Hide the scrollbar */
+}
+
+.loading-overlay.active body {
+  overflow: hidden; /* Lock the body element */
+  height: 100vh; /* Set the body height to 100vh */
+  width: 100vw; /* Set the body width to 100vw */
+}
+
+
+
+
+
+
+.custom-cursor {
+  cursor: url('https://faizigfx.sirv.com/Mouse%20normal.svg'), auto;
+}
+
+.custom-cursor:hover {
+  cursor: url('https://faizigfx.sirv.com/Mouse%20Hover.svg'), auto;
+}
+
+a {
+  cursor: url('https://faizigfx.sirv.com/Hover%202.svg'), auto;
+}
+
+a:hover {
+  cursor: url('https://faizigfx.sirv.com/Hover%202.svg'), auto;
+}

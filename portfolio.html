@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio - MyPortfolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+ 
+ <!-- Vendor CSS Files -->
+
+<!-- Updated Bootstrap CSS to latest stable version -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons (remains unchanged) -->
+<link href="https://faizigfx.sirv.com/Images/Portfolio/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Main CSS File (remains unchanged) -->
+<link href="https://faizigfx.sirv.com/Images/Portfolio/css/portfolio.css" rel="stylesheet">
+
+<!-- Vendor JS Files -->
+
+<!-- Updated jQuery to latest version -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Updated Bootstrap JS to latest version -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Updated: Aug 08 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-page custom-cursor" >
+
+  
+  <!-- Add a loading overlay element -->
+  <div class="loading-overlay">
+    <div class="loading-animation">
+      <!-- Circular animation SVG -->
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#adff2f" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Go to Top Button -->
+  <button id="goToTop" class="go-to-top bottom-right">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+
+  <div class="custom-hamburger" id="headerToggle">
+    <img src="https://faizigfx.sirv.com/Images/open.svg" alt="Open Menu" class="hamburger-open">
+    <img src="https://faizigfx.sirv.com/Images/close.svg" alt="Close Menu" class="hamburger-close">
+  </div>
+  <div class="page-content">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <div class="d-flex flex-column" id="navbarContent">
+        <div class="profile">
+          <img src="https://faizigfx.sirv.com/Images/images/my-logo.png" alt="" class="img-fluid rounded-circle">
+          <h1 class="text-light">FAIZI <span class="second-h">GFX</span></h1>
+          <div class="social-links mt-3 text-center">
+            <a href="https://www.behance.net/itscyberop" target="_blank" class="behance"><i
+                class="bi bi-behance"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100090753999073" target="_blank" class="facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/faizigfx/" target="_blank" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://wa.link/hodais" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li><a href="index.html" class="nav-link scroll to"><i class="bi bi-house-fill"></i> <span>Home</span></a>
+            </li>
+            <li><a href="#portfolio" class="nav-link scroll to"><i class="bi bi-arrow-right-short"></i><span>Social Media Posts</span></a></li>
+            <li><a href="#thumbnail" class="nav-link scroll to"><i class="bi bi-arrow-right-short"></i><span>Thumbnail</span></a></li>
+            <li><a href="#clients" class="nav-link scroll to"><i class="bi bi-people-fill"></i><span>My Clients</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+          <!-- Section Title -->
+          <div class="container page-title" >
+            <h2>Portfolio</h2>
+            <p>Discover a showcase of my creative work, highlighting diverse projects across design, video, and Al art. Each piece reflects a commitment to quality,
+              innovation, and visual storytelling.</p>
+          </div><!-- End Section Title -->
+
+        <div class="container">
+          <!-- Section Title -->
+          <div class="container social-title" >
+            <h2>Social Media Posts</h2>
+          </div><!-- End Section Title -->
+
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+            <div class="row align-items-center ">
+              <div class="col-lg-12 text-center text-lg-center">
+                <ul class="portfolio-filters isotope-filters" >
+                  <li data-filter="*" class="filter-active">All</li>
+                  <li data-filter=".filter-gyros">Gyros Hut</li>
+                  <li data-filter=".filter-ismael">Ismails Clothing</li>
+                  <li data-filter=".filter-auto">Auto Ville</li>
+                  <li data-filter=".filter-clkdit">Clkdit</li>
+                  <li data-filter=".filter-alqamar">Alqamar International</li>
+
+
+
+
+                </ul><!-- End Portfolio Filters -->
+              </div>
+            </div>
+
+
+            <div class="row gy-4 isotope-container"
+              style="position: relative; height: 1344px;">
+
+
+              <!-- -----------------------------alll---------------------------------------- -->
+              <!-- -----------------------------alll---------------------------------------- -->
+              <!-- -----------------------------alll---------------------------------------- -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/23.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/23.jpg" title="Image 4"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/21.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/21.jpg" title="Image 2"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/22.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/22.jpg" title="Image 3"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/2%20(2).jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/2%20(2).jpg" title="Image 1"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/Mother%20(2).jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/Mother%20(2).jpg" title="Image 5"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/polo-club.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/polo-club.jpg" title="Image 7"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/p.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/p.jpg" title="Image 6"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/post.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/post.jpg" title="Image 8"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/post1.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/post1.jpg" title="Image 9"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/post2.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/post2.jpg" title="Image 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/s-post.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/s-post.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/7.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/7.jpg" title="Image 3"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/11.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/11.jpg" title="Image 4"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/1-100.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/1-100.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/10.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/10.jpg" title="Image 5"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240707-WA0049.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240707-WA0049.jpg" title="App 5"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0057.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0057.jpg" title="App 6"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/83-x-79.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/83-x-79.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/2.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/2.jpg" title="Image 9"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/13.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/13.png" title="Image 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/Timming-Post-(A3).jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/Timming-Post-(A3).jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/4.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/4.png" title="Image 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/c1.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/c1.jpg" title="Image 1"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/INSTAGRAM.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/INSTAGRAM.png" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/c2.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/c2.jpg" title="Image 2"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/c3.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/c3.jpg" title="Image 3"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/Eid-Post.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/Eid-Post.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/Artboard%201%20copy%2020.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/Artboard%201%20copy%2020.jpg"
+                        title="Image 11" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/Artboard%201%20copy%2021.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/Artboard%201%20copy%2021.jpg"
+                        title="Image 11" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-alqamar ">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/posts/83-x-79.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/posts/83-x-79.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+              <!-- -----------------------------alll---------------------------------------- -->
+              <!-- -----------------------------alll---------------------------------------- -->
+              <!-- -----------------------------alll---------------------------------------- -->
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0052.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0052.jpg" title="App 1"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240706-WA0017.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240706-WA0017.jpg" title="App 2"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240705-WA0060.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240705-WA0060.jpg" title="App 3"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240707-WA0050.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240707-WA0050.jpg" title="App 4"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240728-WA0018.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240728-WA0018.jpg" title="App 7"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240801-WA0026.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240801-WA0026.jpg" title="App 8"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0058.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0058.jpg" title="App 9"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0049.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0049.jpg"
+                        title="App 10" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0056.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240821-WA0056.jpg"
+                        title="App 11" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240630-WA0004.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240630-WA0004.jpg"
+                        title="App 12" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0050.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240727-WA0050.jpg"
+                        title="App 13" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240728-WA0021.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240728-WA0021.jpg"
+                        title="App 14" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gyros"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240724-WA0025.jpg"
+                    class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Gyros%20Hut/IMG-20240724-WA0025.jpg"
+                        title="App 15" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <!-- ------------------------------------------------------------ismaels------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------ismaels------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------ismaels------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------ismaels------------------------------------------------------------- -->
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/mens-c.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/mens-c.jpg" title="Image 1"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/8.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/8.jpg" title="Image 2"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/banner-2.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/banner-2.jpg" title="App 16"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/ismael.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/ismael.jpg" title="App 17"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0068.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0068.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0078.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0078.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0073.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0073.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0072.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0072.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0077.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0077.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0071.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0071.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0075.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0075.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ismael"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0070.jpg" class="img-fluid"
+                    alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/ismael/IMG-20240821-WA0070.jpg" title="App 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- ------------------------------------------------------------autoville------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------autoville------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------autoville------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------autoville------------------------------------------------------------- -->
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/1.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/1.jpg" title="Image 1"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/11.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/11.png" title="Image 2"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/4.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/4.jpg" title="Image 3"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/6.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/6.jpg" title="Image 4"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/5.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/5.jpg" title="Image 5"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/16.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/16.png" title="Image 6"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/7.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/7.jpg" title="Image 7"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/9.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/Auto%20Ville/9.png" title="Image 8"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- --------------------------------------------------------clkdit--------------------------------------- -->
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/LEFT.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/LEFT.jpg" title="Image 4"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/CENTER.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/CENTER.jpg" title="Image 5"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/RIGHT.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/RIGHT.jpg" title="Image 6"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/Metalic.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/Metalic.jpg" title="Image 7"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/NO1.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/NO1.jpg" title="Image 8"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/v1.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/v1.jpg" title="Image 9"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/v2.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/v2.jpg" title="Image 10"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/v3.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/v3.jpg" title="Image 11"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/V7.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/V7.jpg" title="Image 12"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-clkdit">
+                <div class="portfolio-content h-100">
+                  <img src="https://faizigfx.sirv.com/Images/posts/clkdit/V8.jpg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="https://faizigfx.sirv.com/Images/posts/clkdit/V8.jpg" title="Image 13"
+                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                          class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div><!-- End Portfolio Container -->
+
+          </div>
+
+        </div>
+
+      </section><!-- /Portfolio Section -->
+
+
+      <!-- Portfolio Section -->
+        <section id="thumbnail" class="portfolio section">
+
+          <div class="container">
+            <!-- Section Title -->
+            <div class="container section-title" >
+              <h2>Thumbnail Design</h2>
+            </div><!-- End Section Title -->
+
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+
+
+
+              <div class="row gy-4 isotope-container" 
+                style="position: relative; height: 1344px;">
+
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/meta-v3.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/meta-v3.jpg" title="Thumbnail Meta"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/new-client-test.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/new-client-test.jpg" title="New Client"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/harris.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/harris.jpg" title="Harris"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/thumbnail-nick-livring-3.jpg" class="img-fluid"
+                      alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/thumbnail-nick-livring-3.jpg"
+                          title="Nick Livring" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/rv2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/rv2.jpg" title="RV2"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/v1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/v1.jpg" title="V1"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/mr-3.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/mr-3.jpg" title="MR3"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/bitso.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/bitso.jpg" title="Bitso"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/JAKE-PAUL.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/JAKE-PAUL.jpg" title="Jake Paul"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/donald.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/donald.jpg" title="Donald"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/car.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/car.jpg" title="Car"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/v-8.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/v-8.jpg" title="V8"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/trump2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/trump2.jpg" title="Trump 2"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/Thumbnail%206x.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/Thumbnail%206x.jpg" title="Thumbnail 6x"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/BLIZARD.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/BLIZARD.jpg" title="Blizard"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/shark.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/shark.jpg" title="Shark"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/man-disaster.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/man-disaster.jpg" title="Man Disaster"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/joplin.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/joplin.jpg" title="Joplin"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail"
+                  style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/bible.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/bible.jpg" title="Bible"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/2011-T.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/2011-T.jpg" title="Thumbnail 1"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/INDIAN-OCEAN.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/INDIAN-OCEAN.jpg" title="Thumbnail 2"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/dr-dis.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/dr-dis.jpg" title="Thumbnail 3"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/france-league.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/france-league.jpg" title="Thumbnail 4"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/HANSI-FLICK.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/HANSI-FLICK.jpg" title="Thumbnail 5"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/EPL.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/EPL.jpg" title="Thumbnail 6"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/COPA.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/COPA.jpg" title="Thumbnail 7"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/EURO-HISTORY.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/EURO-HISTORY.jpg" title="Thumbnail 8"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/europa.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/europa.jpg" title="Thumbnail 9"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/copa2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/copa2.jpg" title="Thumbnail 10"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/check.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/check.jpg" title="Thumbnail 11"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/20-daily-habits.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/20-daily-habits.jpg" title="Thumbnail 12"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/calcio.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/calcio.jpg" title="Thumbnail 13"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/2011.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/2011.jpg" title="Thumbnail 14"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/uefa.jpg" class="img-fluid grayscale-img"
+                      alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/uefa.jpg" title="Thumbnail 15"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/la-liga.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/la-liga.jpg" title="Thumbnail 16"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/KILLER-MBAPPE.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/KILLER-MBAPPE.jpg" title="Thumbnail 17"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/twister-2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/twister-2.jpg" title="Thumbnail 18"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/4.png" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/4.png" title="Thumbnail 19"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/3.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/3.jpg" title="Thumbnail 20"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/12.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/12.jpg" title="Thumbnail 22"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-thumbnail">
+                  <div class="portfolio-content h-100">
+                    <img src="https://faizigfx.sirv.com/Images/thumbnail/1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <div>
+                        <a href="https://faizigfx.sirv.com/Images/thumbnail/1.jpg" title="Thumbnail 23"
+                          data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                            class="bi bi-zoom-in"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div><!-- End Portfolio Container -->
+
+            </div>
+
+          </div>
+
+        </section><!-- /Portfolio Section -->
+      </section>
+
+
+      <!-- Clients Section -->
+      <section id="clients" class="clients section">
+
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>My Clients</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" >
+
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%201.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%201%20copy.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img
+                  src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%201%20copy%202.png" class="img-fluid"
+                  alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%202.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%203.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%204.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%205.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://faizigfx.sirv.com/Images/logo/logos/Artboard%206.png"
+                  class="img-fluid" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+
+      </section><!-- /Clients Section -->
+
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mobile Navigation
+        const header = document.getElementById('header');
+        const headerToggle = document.getElementById('headerToggle');
+        const openIcon = headerToggle.querySelector('.hamburger-open');
+        const closeIcon = headerToggle.querySelector('.hamburger-close');
+
+        function toggleMobileNav() {
+          header.classList.toggle('mobile-nav-active');
+
+          // Add spin animation class
+          headerToggle.classList.add('spin-animation');
+
+          // Toggle icon visibility with a slight delay for smooth transition
+          setTimeout(() => {
+            if (header.classList.contains('mobile-nav-active')) {
+              openIcon.style.display = 'none';
+              closeIcon.style.display = 'block';
+            } else {
+              openIcon.style.display = 'block';
+              closeIcon.style.display = 'none';
+            }
+
+            // Remove spin animation class after transition
+            setTimeout(() => {
+              headerToggle.classList.remove('spin-animation');
+            }, 300);
+          }, 150);
+        }
+
+        headerToggle.addEventListener('click', toggleMobileNav);
+
+        // Close mobile nav when clicking on a nav link
+        const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (header.classList.contains('mobile-nav-active')) {
+              toggleMobileNav();
+            }
+          });
+        });
+
+        // Close mobile nav when clicking outside the header
+        document.addEventListener('click', (e) => {
+          if (!header.contains(e.target) && !headerToggle.contains(e.target)) {
+            if (header.classList.contains('mobile-nav-active')) {
+              toggleMobileNav();
+            }
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 1199) {
+            header.classList.remove('mobile-nav-active');
+            openIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+          }
+        });
+
+        // Back to Top Button
+        const goToTopButton = document.getElementById('goToTop');
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 200) {
+            goToTopButton.classList.add('show');
+            goToTopButton.classList.remove('hide');
+          } else {
+            goToTopButton.classList.add('hide');
+            goToTopButton.classList.remove('show');
+          }
+        });
+
+        // Scroll to top when the button is clicked
+        goToTopButton.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+
+        // Highlight the active navbar link
+        const sections = document.querySelectorAll('section'); // Select all sections
+
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section'); // Assuming your sections have <section> tags
+
+    function activateLink() {
+        let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + section.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', activateLink);
+    activateLink(); // Call it once to set the initial active link
+});
+
+
+
+
+      // ======================================loading------------------------------------
+
+      document.addEventListener("DOMContentLoaded", function() {
+    const loadingOverlay = document.querySelector(".loading-overlay");
+    const header = document.querySelector("header");
+  
+    loadingOverlay.classList.add("active");
+    header.style.display = "none"; /* or opacity: 0; */
+  
+    setTimeout(function() {
+      loadingOverlay.style.display = "none";
+      header.style.display = "block"; /* Show the header */
+      loadingOverlay.classList.remove("active");
+   }, 4000); // Ensure the overlay is hidden after 4 seconds
+   
+  });
+
+  // Get the loading overlay element
+const loadingOverlay = document.querySelector('.loading-overlay');
+
+// Add an event listener to the loading overlay
+loadingOverlay.addEventListener('animationstart', () => {
+  // Lock the body element
+  document.body.style.overflow = 'hidden';
+});
+
+// Add an event listener to the loading overlay
+loadingOverlay.addEventListener('animationend', () => {
+  // Unlock the body element
+  document.body.style.overflow = 'auto';
+});
+
+
+var imgLoad = imagesLoaded('.container', function() {
+      alert('All images have been loaded.');
+    });
+
+
+
+
+
+    </script>
+
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- jQuery (optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- External Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+
+    <!-- Main JS File -->
+    <script src="/portfolio.js"></script>
+
+</body>
+
+</html>
