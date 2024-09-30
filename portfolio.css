@@ -11,13 +11,6 @@
 }
 
 
-@font-face {
-  font-family: 'Druk'; /* Name your font family */
-  src: url('/DrukWideBold.ttf'); /* Locate the .ttf file within your directory*/
-  src: url('/proxima.otf');
-  font-family: 'proxima';
-}
-
 
 
 p{
