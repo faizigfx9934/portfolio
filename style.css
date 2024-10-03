@@ -1,0 +1,2409 @@
+/**
+* Template Name: iPortfolio
+* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+
+ #skills,#contact #brand {
+  padding-top: 150px; /* Increase padding at the top */
+  padding-bottom: 100px; /* Increase padding at the bottom */
+}
+#testimonials{
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+
+#section-services{
+  padding-top: 35px;
+  padding-bottom: 100px;
+
+}
+
+/* Optional: You can adjust individual sections if needed */
+#about {
+  padding-top: 190px; /* Less padding for about section */
+}
+
+#skills {
+  padding-bottom: 120px; /* More padding for skills section */
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.cdnfonts.com/css/druk-wide-bold');
+
+@font-face {
+  src: url('/public_html/proxima.otf');
+  font-family: 'proxima';
+}
+
+
+
+.section-title{
+  font-family: 'Druk Wide Bold', sans-serif;  
+}
+.section-title p{
+  font-family: (proxima);
+  color: white;
+}
+
+.section-title h2{
+    font-family: 'druk';
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #ffffff;
+    display: inline-block;
+  }
+  .colors-title{
+    text-align: center;
+    
+  }
+.colors-title h2{
+  font-family: 'druk';
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #ffffff;
+    display: inline-block;
+  text-align: center;
+}
+
+.colors-title h2::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px; /* Width of the line */
+  height: 3px; /* Height of the line */
+  background: #d6ff00; /* Color of the line */
+  bottom: 0; /* Align it to the bottom of the h2 element */
+  left: 50%; /* Start at the center */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+
+
+  .section-title span,
+  .colors-title span {
+    color: #d6ff00;
+  }
+.section-title h2::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px; /* Width of the line */
+  height: 3px; /* Height of the line */
+  background: #d6ff00; /* Color of the line */
+  bottom: 0; /* Align it to the bottom of the h2 element */
+  left: 0%; /* Set this to 0% to align it exactly with the start of the text */
+  transform: scaleX(-1); /* This ensures it only expands to the left */
+}
+
+
+
+/* Media query for mobile adjustments */
+@media (max-width: 768px) {
+
+
+  .section-title{
+    font-family: 'Druk Wide Bold', sans-serif;  
+  }
+  .section-title h2{
+    font-family: 'Druk Wide Bold', sans-serif;  
+    font-size: 26px;
+  }
+
+  .colors-title h2{
+    font-family: 'Druk Wide Bold', sans-serif;  
+    font-size: 20px
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* --------------------scrollbar---------------------- */
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+
+/* Track */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0ed324; 
+  display: none;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d6ff00; 
+}
+
+div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"] {
+    pointer-events: none;
+    opacity:0;
+}
+
+
+.text-xs{
+    font-size: .75rem;
+    line-height: 1rem;
+    display: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#page-structure{
+  height: 100vh;
+}
+
+
+
+@font-face {
+  font-family: 'Druk'; /* Name your font family */
+  src: url('/public_html/DrukWideBold.ttf'); /* Locate the .ttf file within your directory*/
+  src: url('/public_html/proxima.otf');
+  font-family: 'proxima';
+}
+
+
+p{
+  font-family: "proxima",sans-serif;
+}
+
+/*--------------------------------------------------------------
+# General
+/* Body Styles */
+body {
+  position: relative;
+  min-height: 100vh; /* Ensure the body covers the full viewport */
+  margin: 0;
+  padding: 0;
+  pointer-events: auto; /* Ensures hover effects work */
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+  background-color: #000;  /* Fallback color in case background image doesn't load */
+  overflow: hidden; /* Prevents background from moving during scroll */
+  font-family: 'Arial', sans-serif; /* Adding default font */
+}
+
+/* Background Image Styles */
+body::before {
+  content: '';
+  position: fixed; /* Make the background fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://faizigfx.sirv.com/Images/web%20images/body.jpg') center center no-repeat;
+  background-size: cover; /* Ensures the image covers the entire background without stretching */
+  z-index: -1; /* Places the background behind all content */
+}
+
+/* Glassmorphism Effect */
+body::after {
+  content: '';
+  position: fixed; /* Ensure it stays fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.27); /* Slightly more opaque for a stronger effect */
+  backdrop-filter: blur(7px); /* Glassmorphism blur effect */
+  -webkit-backdrop-filter: blur(20px); /* For Safari */
+  z-index: 0; /* On top of the background image but behind content */
+}
+
+/* Ensure all content is above the background */
+body * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+a {
+  color: #d6ff00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d6ff00;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+@media (min-width: 1024px) { /* Adjust padding for even larger screens (e.g., desktops) */
+  main {
+    padding-left: 14%;
+  }
+  
+  
+}
+
+/* Style for the Go to Top button */
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6ff00;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px; /* Larger font size for the icon */
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth fade-in/out */
+  z-index: 2;
+}
+
+/* Show the button when it's visible */
+.go-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hidden state */
+.go-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Bottom-Right */
+.go-to-top.bottom-right {
+  position: fixed;
+  bottom: 57px;
+  right: 69px;
+  /* other styles */
+}
+
+
+
+/* -----------------------------------header --------------------------------- */
+
+/* Header with Glassmorphism Effect */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.808); /* Semi-transparent background */
+  border-right: 2px solid #d6ff00;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  transition: all 0.5s ease-in-out;
+  z-index: 9997;
+  padding: 0 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pseudo-element for the background image */
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://faizigfx.sirv.com/Images/web%20images/body.jpg') center center no-repeat;
+  background-size: cover; /* Ensures the image covers the entire header */
+  opacity: 0.1; /* Adjust opacity to control the image visibility */
+  z-index: -1; /* Place the image behind the header content */
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #d6ff00;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: transparent;
+  color: #d6ff00;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover {
+  background: #d6ff00;
+  color: #000000;
+  text-decoration: none;
+  box-shadow: 0 0 20px #d6ff00, 0 0 40px #d6ff00, 0 0 60px #d6ff00;
+}
+
+.second-h {
+  color: #d6ff00;
+  
+}
+
+/* Copyright section at the bottom of the header */
+#header .copyright {
+  margin-top: auto; /* Ensures the copyright section stays at the bottom */
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.copyright span{
+  color: #d6ff00;
+}
+.nav-menu {
+  padding: 10px 18px 20px 25px;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #d6ff00;
+}
+
+/* Mobile Navigation */
+.custom-hamburger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+
+.custom-hamburger img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.custom-hamburger:hover {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/Click.svg'), auto;
+}
+
+.hamburger-close {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .custom-hamburger {
+    display: block;
+  }
+
+  #header {
+    left: -300px;
+    transition: all 0.3s;
+  }
+
+  #header.mobile-nav-active {
+    left: 0;
+  }
+
+  #main {
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+}
+
+#header.mobile-nav-active + .custom-hamburger .hamburger-open {
+  display: none;
+}
+
+#header.mobile-nav-active + .custom-hamburger .hamburger-close {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 0.3s ease-in-out;
+}
+
+
+
+/* -----------------------------------header end--------------------------------- */
+/* -----------------------------------header end--------------------------------- */
+
+
+/*--------------------------------------------------------------*/
+/* Hero Section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default desktop images */
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 1024px) {
+  .carousel-item:nth-child(1) img {
+    content: url('https://faizigfx.sirv.com/Images/web%20images/tablet2.jpg');
+  }
+
+  .carousel-item:nth-child(2) img {
+    content: url('https://faizigfx.sirv.com/Images/web%20images/tablet-slide2.jpg');
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .carousel-item:nth-child(1) img {
+    content: url('https://faizigfx.sirv.com/Images/web%20images/mobile-2.jpg');
+  }
+
+  .carousel-item:nth-child(2) img {
+    content: url('https://faizigfx.sirv.com/Images/web%20images/mobile-silde-2.jpg');
+  }
+}
+
+
+
+/* -------------------------end hero ------------------------------- */
+
+
+
+
+
+
+/* Subtitle Styling */
+#hero p span {
+  font-weight: 600; /* Slightly bolder text */
+  color: #d6ff00; /* Green color for emphasis */
+  padding-bottom: 2px;
+  border-bottom: 2px solid #d6ff00; /* Underline effect */
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: transparent;
+}
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+#about{
+  color: white;
+  background-color: transparent;
+
+
+}
+
+#skills{
+  background-color:transparent;
+  color: white;
+  padding-top: 196px;
+
+}
+ 
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ========================================== */
+.about .content {
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin-top: 20px; /* Add space above the content container */
+  transition: transform 0.5s ease; /* Smooth transition for the scaling effect */
+}
+
+.about .content:hover {
+  transform: scale(1.05); /* Scales the container slightly */
+}
+
+.about .content-title {
+  margin-bottom: 20px; /* Add space below the title */
+}
+
+.about .content-title h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #ffffff; /* Ensure the title is readable */
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #d6ff00;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-img {
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for the 3D transform */
+  pointer-events: auto; /* Enable hover interaction */
+  
+  /* Initial 3D transform */
+  transform: perspective(600px) rotateY(10deg) rotateX(5deg) scale(0.9);
+}
+
+.about-img:hover {
+  /* 3D bending effect on hover */
+  transform: perspective(600px) rotateY(-20deg) rotateX(15deg) translateY(-10px) scale(1);
+}
+
+/* Media query to disable hover effect on touch devices */
+@media (hover: none) {
+  .about-img {
+    transform: none; /* Remove 3D transform */
+  }
+
+  .about-img:hover {
+    transform: none; /* Ensure no hover effect on touch devices */
+  }
+}
+
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+.facts {
+  padding-bottom: 30px;
+
+}
+
+.facts .count-box {
+  padding: 30px;
+  width: 100%;
+}
+
+.facts .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #0ed324;
+  float: left;
+  line-height: 0;
+}
+
+.facts .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+.facts .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.facts .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.facts .count-box a:hover {
+  color: #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Akills
+--------------------------------------------------------------*/
+/* Glassmorphism container for the skills section */
+.skills-glass-container {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Frosted glass background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out; /* Smooth transitions */
+
+  /* Initial horizontal bend effect */
+  transform: perspective(600px) rotateY(5deg); /* Bent effect */
+  filter: blur(1px); /* Slight blur effect when not hovered */
+}
+
+.skills-glass-container:hover {
+  transform: perspective(600px) rotateY(0deg) translateY(-10px); /* Straighten on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover for depth */
+  filter: blur(0); /* Remove blur effect on hover */
+  transition: 0.5s ease-in-out;
+}
+
+/* Media query to disable 3D effect on touch devices */
+@media (hover: none) {
+  .skills-glass-container {
+    transform: none; /* Remove 3D transform */
+    filter: blur(0); /* No blur on touch devices */
+  }
+
+  .skills-glass-container:hover {
+    transform: translateY(-10px); /* Simple translate effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover for depth */
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 0;
+  margin: 11px 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulse animation to progress bar */
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #d6ff00;
+  
+}
+
+/* --------------------------services0--------------------------------------- */
+.section-services {
+  padding-top: 110px;
+  padding-bottom: 120px;
+
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: transparent; /* Changed from 'none' to 'transparent' */
+  display: flex; /* Sets the section to use Flexbox */
+  justify-content: space-around; /* Evenly spaces the cards across the available space */
+  align-items: center; /* Aligns items vertically */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if not enough space */
+}
+
+.single-service {
+  flex: 1 1 20%; /* Allows each card to grow and shrink but base it on 20% of the container's width */
+  margin: 10px; /* Adds a small space between the cards */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------card----------------------------------------- */
+.section-services .single-service {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.1); /* Frosted glass background */
+  border-radius: 12px; /* Rounded corners for the glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Slight shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  
+  /* Initial horizontal bend effect */
+  transform: perspective(600px) rotateY(5deg); /* Bent effect */
+}
+
+.section-services .single-service:hover {
+  transform: perspective(600px) rotateY(0deg) translateY(-10px); /* Straighten on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover for depth */
+}
+
+/* Media query to disable 3D effect on touch devices */
+@media (hover: none) {
+  .section-services .single-service {
+    transform: none; /* Remove 3D transform */
+  }
+
+  .section-services .single-service:hover {
+    transform: translateY(-10px); /* Simple translate effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover for depth */
+  }
+}
+/* ------------------------------------------------------------------------------------------------card----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-services .single-service .part-1 {
+	padding: 40px 40px 25px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+	text-align: center; /* Center icons and text */
+}
+
+.section-services .single-service .part-1 i {
+	margin-bottom: 25px;
+	font-size: 50px;
+	color: #d6ff00;
+}
+
+.section-services .single-service .part-1 .title {
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.8em;
+}
+
+.section-services .single-service .part-2 {
+	padding: 16px;
+}
+
+.section-services .single-service .part-2 .description {
+	margin-bottom: 22px;
+	color: #e0e0e0; /* Lightened color for better contrast on frosted glass */
+	font-size: 14px;
+	line-height: 1.8em;
+}
+
+.section-services .single-service .part-2 a {
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 16px; /* Add padding to avoid text sticking to border */
+	border: 2px solid transparent; /* Initial border state */
+	border-radius: 20px;
+	transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.section-services .single-service .part-2 a:hover {
+	border-color: #d6ff00; /* Change border color on hover */
+	color: #d6ff00; /* Change text color on hover */
+}
+
+.section-services .single-service .part-2 a i {
+	margin-right: 10px;
+	color: #d6ff00; /* Icon color */
+}
+/*--------------------------------------------------------------
+/* Portfolio Section */
+.portfolio .portfolio-item {
+  width: calc(50% - 10px); /* 2 cards per row with space between them */
+  margin-bottom: 20px; /* Space between rows */
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: white;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+  backdrop-filter: blur(15px); /* Blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari compatibility */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border for 'glass' effect */
+  z-index: 1;
+  border-radius: 10px;
+  transform: perspective(600px) rotateY(5deg); /* Slight bend effect */
+  transition: 0.4s ease-in-out;
+}
+
+/* Hover effect to straighten the card */
+.portfolio .portfolio-wrap:hover {
+  transform: perspective(600px) rotateY(0deg) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Image styles */
+.portfolio .portfolio-wrap img {
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Ensure image is above any overlay */
+}
+
+/* Reduce image opacity on hover */
+.portfolio .portfolio-wrap:hover img {
+  opacity: 0.7; /* Lower opacity of image on hover */
+}
+
+/* Zoom icon link styling */
+.portfolio .zoom-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure the link is above the image */
+  text-decoration: none; /* Remove any default link styles */
+  background: none; /* No background */
+}
+
+/* Zoom icon styles */
+.zoom-icon {
+  color: white;
+  font-size: 2em; /* Adjust icon size */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Center icon on hover */
+.portfolio .portfolio-wrap:hover .zoom-icon {
+  opacity: 1; /* Show the icon on hover */
+}
+
+/* Icon hover styling */
+.zoom-icon:hover {
+  color: #d6ff00;
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/Click.svg'), auto;
+}
+
+/* Media query to disable 3D effect on touch devices */
+@media (hover: none) {
+  .portfolio .portfolio-wrap {
+    transform: none; /* Remove 3D transform */
+  }
+
+  .portfolio .portfolio-wrap:hover {
+    transform: translateY(-5px); /* Simple translate effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover for depth */
+  }
+}
+
+/* Portfolio button links with text only */
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  position: absolute;
+  bottom: -100%; /* Initially hidden below the card */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly; /* Space buttons evenly */
+  align-items: center;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+/* Add hover text effect */
+.portfolio .portfolio-wrap {
+  position: relative; /* Add relative positioning to the container */
+}
+
+.hover-text {
+  position: absolute; /* Position the hover text absolutely */
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position to center */
+  text-align: center; /* Center the text horizontally */
+  opacity: 0; /* Hide the text initially */
+  transition: opacity 0.3s; /* Add a transition effect */
+  color: white;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .portfolio .portfolio-wrap {
+    width: 100%; /* Ensure full width for each card */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a {
+    font-size: 10px;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 10px; /* Smaller spacing for mobile */
+  }
+
+  .portfolio .portfolio-item {
+    width: 100%; /* Full width per card on mobile */
+    margin-bottom: 10px; /* Less margin between cards */
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+}
+
+.portfolio-wrap {
+  position: relative; /* Add relative positioning to the container */
+}
+
+.hover-text {
+  position: absolute; /* Position the hover text absolutely */
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position to center */
+  text-align: center; /* Center the text horizontally */
+  opacity: 0; /* Hide the text initially */
+  transition: opacity 0.3s; /* Add a transition effect */
+}
+
+.portfolio-wrap:hover .hover-text {
+  opacity: 1; /* Show the text on hover */
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+/* Glassmorphism container for testimonials */
+.testimonials .testimonial-item {
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 50px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin: 0 auto;
+  max-width: 90%; /* Increased width for better fit */
+  height: auto; /* Ensure height adjusts based on content */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  
+
+}
+
+.testimonials .testimonial-item:hover {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/grab.svg'), grab; /* Change cursor on hover */
+}
+
+.testimonials .testimonial-item:active {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/grabing.svg'), grabbing; /* Change cursor when active */
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 80px; /* Adjust image size */
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+
+.testimonials-slider{
+  padding-top: 20px;
+}
+
+
+.swiper-slide{
+  transform: perspective(600px) rotateY(5deg) translateY(0); /* Slight bend effect */
+  transition: 0.3s ease-in-out;
+}
+.swiper-slide:hover{
+  transform: perspective(600px) rotateY(0deg) translateY(-10px); /* Straighten on hover */
+}
+
+
+/* Apply the hover effect only for non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .swiper-slide {
+    transform: perspective(600px) rotateY(5deg) translateY(0); /* Slight bend effect */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .swiper-slide:hover {
+    transform: perspective(600px) rotateY(0deg) translateY(-10px); /* Straighten on hover */
+  }
+}
+
+
+.testimonials .testimonial-item h3 {
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #ffffff;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px; /* Slightly larger font size */
+  color: #ffffff;
+  margin: 0;
+}
+
+.testimonials .testimonial-item p {
+  font-size: 16px; /* Slightly larger font size for review */
+  font-style: italic;
+  margin: 0;
+  padding: 15px; /* Adjust padding */
+  color: #ffffff;
+  background: transparent; /* Remove gray background */
+  border-radius: 6px;
+  box-shadow: none; /* Remove box shadow */
+  position: relative;
+}
+
+.testimonials .testimonial-item p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent; /* Adjusted arrow size */
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  left: calc(50% - 15px);
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 10px; /* Smaller bullet size */
+  height: 10px; /* Smaller bullet size */
+  background-color: #272829;
+  opacity: 1;
+  border: 1px solid #d6ff00;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #d6ff00;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-bottom: 130px;
+}
+
+.contact .info {
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #149ddd;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #173b6c;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #149ddd;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: #d6ff00;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #0ed324;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #d6ff00;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #d6ff00;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 15px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #37b3ed;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 15px;
+  font-family: 'proxima';
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background-image: url('/bg22.jpg');
+}
+footer#footer{
+  border-right: 2px solid #d6ff00 ;
+}
+
+#footer .copyright {
+  text-align: center;
+  font-family: "proxima",sans-serif;
+}
+.copyright span{
+  color: #d6ff00;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #d6ff00;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+
+
+
+
+
+
+/* -------------------------clear bar image======================= */
+.glightbox-clean .gdesc-inner {
+  padding: 0;
+}
+
+
+.glightbox-clean .gslide-title {
+  display: none;
+}
+
+
+
+
+
+
+
+/* Hide items with the .hide-from-all class when "All" is selected */
+.filter-active[data-filter="*"] ~ .portfolio-container .portfolio-item.hide-from-all {
+  display: none;
+}
+
+/* Show all other portfolio items */
+.portfolio-item {
+  display: block;
+}
+
+
+
+
+
+
+
+
+/* Prevent text selection */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Firefox */
+}
+
+/* Prevent image dragging */
+img {
+    -webkit-user-drag: none; /* Safari */
+    -khtml-user-drag: none; /* Konqueror HTML */
+    -moz-user-drag: none; /* Firefox */
+    -ms-user-drag: none; /* Internet Explorer/Edge */
+
+}
+
+/* Prevent right-click context menu on images */
+img {
+    pointer-events: none; /* Disable interaction with images */
+}
+
+
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 9px 18px 10px 20px;
+    margin: 0px 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #0bc721;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters {
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 2px 15px;
+}
+
+
+
+
+
+
+
+
+
+/* -----button-------------------------- */
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin: 20px 0; /* Adjust margin as needed */
+  font-weight: bold;
+}
+
+.glow-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #202020;
+  background: #d6ff00;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+  color:#d6ff00;
+  background: #13121211;
+}
+
+
+
+
+/* -----------------------------contact-------------------------------- */
+
+/* Contact Section */
+
+.contact .php-email-form {
+  background-color: transparent;
+}
+
+
+.contact .form {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+  border-radius: 20px; /* Rounded corners */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for the glassmorphism effect */
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+
+.contact .form input,
+.contact .form textarea {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+
+
+.contact .form button:hover {
+  background-color: #d6ff00;
+}
+
+.contact .form input:focus,
+.contact .form textarea:focus {
+  outline: none;
+  border: 2px solid #d6ff00;
+}
+
+.contact .form input,
+.contact .form textarea {
+  margin-bottom: 10px;
+}
+
+/* Reduce section height */
+.contact {
+  padding: 40px 0;
+}
+
+
+
+
+
+/* Flexbox Container for Info Boxes */
+.contact .info-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact .info-box {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+  color: #fff;
+  padding: 15px;
+  border-radius: 20px; /* Rounded corners */
+  flex: 1; /* Make boxes equal in width */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Add shadow */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for the glassmorphism effect */
+  transition: all 0.3s ease;
+}
+
+.contact .info-box h4 {
+  font-size: 16px;
+  color: #d6ff00;
+  margin-bottom: 10px;
+}
+
+.info-box a p {
+  color: white;
+}
+.contact .info-box p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Hover effect */
+.contact .info-box:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly increase transparency on hover */
+}
+
+/* Responsive layout for smaller devices */
+@media (max-width: 768px) {
+  .contact .info-box-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .info-box {
+    width: 100%; /* Take full width on small screens */
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+/* Change placeholder color */
+.contact .form input::placeholder,
+.contact .form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Change color and adjust transparency */
+  opacity: 1; /* Ensures the color is applied correctly across all browsers */
+}
+
+/* Optional: Customize the placeholder on focus for consistency */
+.contact .form input:focus::placeholder,
+.contact .form textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Lighter color when focused */
+}
+
+
+
+
+
+
+
+
+/* -----------------------brands------------------------------ */
+
+/*--------------------------------------------------------------
+# Brand
+--------------------------------------------------------------*/
+.brand-slider{
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+ border-radius: 20px; /* Rounded corners */
+backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance the glass look */
+}
+/* Glassmorphism container for brand */
+.brand .brand-item {
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 50px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  max-width: 90%; /* Increased width for better fit */
+  height: auto; /* Ensure height adjusts based on content */
+  padding-top: 30px;
+}
+
+.brand .brand-item .brand-img {
+  width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  filter: grayscale(1);
+  position: relative;
+  z-index: 1;
+  transition: filter 0.3s ease-in-out;
+  pointer-events: auto; /* Enable hover interaction */
+}
+
+.brand .brand-item .brand-img:hover {
+  filter: grayscale(0);
+ 
+}
+
+
+.brand .brand-item h3 {
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: bold;
+  margin: 10px 0 2px 0;
+  color: #ffffff;
+}
+
+.brand .brand-item h4 {
+  font-size: 14px; /* Slightly larger font size */
+  color: #ffffff;
+  margin: 0;
+}
+
+.brand .brand-item p {
+  font-size: 16px; /* Slightly larger font size for review */
+  font-style: italic;
+  margin: 0;
+  padding: 15px; /* Adjust padding */
+  color: #ffffff;
+  background: transparent; /* Remove gray background */
+  border-radius: 6px;
+  box-shadow: none; /* Remove box shadow */
+  position: relative;
+}
+
+.brand .brand-item p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent; /* Adjusted arrow size */
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  left: calc(50% - 15px);
+}
+
+.brand .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.brand .swiper-pagination .swiper-pagination-bullet {
+  width: 10px; /* Smaller bullet size */
+  height: 10px; /* Smaller bullet size */
+  background-color: #272829;
+  opacity: 1;
+  border: 1px solid #d6ff00;
+}
+
+.brand .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #d6ff00;
+}
+
+
+
+/* Swiper Container */
+.brand-slider {
+  width: 100%;
+  padding: 5px 10px 0; /* Adjust padding as needed */
+}
+.brand-slider:hover{
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/grab.svg'), grab;
+}
+
+.brand-slider:active{
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/grabing.svg'), grabbing;
+}
+/* Swiper Wrapper */
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.8s ease; /* Smooth transition effect */
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure slides take full width */
+  box-sizing: border-box;
+  padding: 2px 4px; /* Reduced padding for less space between cards */
+  transition: transform 0.8s ease; /* Smooth transition effect */
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px; /* Smaller bullet size */
+  height: 10px; /* Smaller bullet size */
+  background-color: #272829;
+  opacity: 1;
+  border: 1px solid #d6ff00;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #d6ff00;
+}
+
+
+div.brand-item.aos-init.aos-animate{
+  width: 100px;
+}
+
+
+
+
+
+.portfolio-wrap:t{
+  background-color: rgb(255, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+/* Style the loading overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background */
+  z-index: 1000; /* Ensure it's on top of everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add animation to fade out the loading overlay */
+.loading-overlay {
+  animation: fadeOut 1s forwards;
+  animation-delay: 3s; /* Wait for the circle animation to complete */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Style the loading animation */
+.loading-animation {
+  display: flex;
+  justify-content: space-between;
+  width: 45px; /* Adjusted to fit smaller circles */
+}
+
+.circle {
+  width: 10px;  /* Smaller circle size */
+  height: 10px; /* Smaller circle size */
+  border-radius: 50%;
+  background-color: #adff2f; /* Neon green color */
+  opacity: 0; /* Start with low opacity */
+  animation: bounce 1.5s infinite ease-in-out, fadeInOut 1.5s infinite;
+}
+
+.circle:nth-child(1) {
+  animation-delay: 0s, 0s;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s, 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s, 0.6s;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Fading in and out animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.2; /* Low opacity */
+  }
+  25%, 75% {
+    opacity: 1; /* Full opacity at bounce peak */
+  }
+}
+
+/* Hide the hamburger icon and nav when loading is active */
+.loading-overlay.active ~ header .hamburger,
+.loading-overlay.active ~ nav {
+  display: none;
+}
+
+/* Hide the hamburger icon in mobile and tablet view */
+@media screen and (max-width: 768px) {
+  .loading-overlay.active ~ header .hamburger {
+    display: none;
+  }
+  .loading-overlay.active ~ nav {
+    display: none;
+  }
+}
+
+/* Lock the body element and hide all content when loading overlay is active */
+.loading-overlay.active ~ * {
+  overflow: hidden; /* Disable scrolling */
+}
+
+/* Ensure the site content is hidden */
+.loading-overlay.active + .page-content {
+  opacity: 0;
+}
+
+/* Unlock the content and show the header after loading is done */
+.loading-overlay:not(.active) + .page-content {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.custom-cursor {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/normal%202.svg'), auto;
+}
+
+
+a {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/hover.svg'), auto;
+}
+
+a:hover {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/hover.svg'), auto;
+}
+
+.glow-button:hover {
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/hover.svg'), auto;
+}
+
+.contact .form button:hover {
+  color: rgb(0, 255, 34);
+  background: #000000;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet:hover{
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/Click.svg'), auto;
+}
+
+
+
+.nav-link.active {
+color: #d6ff00;
+}
+
+
+
+
+/* Style for the Go to Top button */
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6ff00;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 2;
+  box-shadow: 0 0 10px #d6ff00; /* Initial glow */
+  animation: breathing-glow 2s infinite; /* Add breathing glow animation */
+  transition: 0.3s ease-in-out;
+}
+.go-to-top:hover{
+  background-color: #272829;
+  color: #d6ff00;
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/Click.svg'), auto;
+}
+
+.go-to-top:active{
+  cursor: url('https://faizigfx.sirv.com/Images/web%20images/cursors/grabing.svg'), grabbing;
+}
+/* Breathing glow animation */
+@keyframes breathing-glow {
+  0% {
+    box-shadow: 0 0 10px #d6ff00, 0 0 20px #d6ff00, 0 0 30px #d6ff00;
+  }
+  50% {
+    box-shadow: 0 0 20px #d6ff00, 0 0 40px #d6ff00, 0 0 60px #d6ff00;
+  }
+  100% {
+    box-shadow: 0 0 10px #d6ff00, 0 0 20px #d6ff00, 0 0 30px #d6ff00;
+  }
+}
+
+
+/* Show the button when it's visible */
+.go-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hidden state */
+.go-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Bottom-Right */
+.go-to-top.bottom-right {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  /* other styles */
+}
+
+
+
+#video {
+  padding: 60px 238px;
+  overflow: hidden;
+  box-sizing: border-box; /* added this rule to include padding in width calculation */
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%; /* added this rule to limit the width to the parent container */
+  margin: 0 auto; /* added this rule to center the grid horizontally */
+}
+
+.video-card {
+  margin: 10px;
+  width: calc(33.33% - 20px); /* updated width to fit 3 cards in a row */
+  height: 100%; /* updated to 100% */
+  position: relative; /* add this to make the anchor tag absolute */
+  box-sizing: border-box; /* added this rule to include padding in width calculation */
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* added this rule to make the video visible */
+}
+
+.play-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content; /* added this rule to center horizontally */
+  height: fit-content; /* added this rule to center vertically */
+  font-size: 36px;
+  color: #fff;
+  opacity: 0;
+  cursor: pointer;
+  padding: 154px;
+  transition: 0.5s ease-in-out; /* added transition effect */
+}
+
+.play-icon i {
+  transition: 0.5s ease-in-out; /* added transition effect */
+}
+
+.play-icon:hover {
+  opacity: 1;
+}
+
+/* updated media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+  #video {
+    padding: 30px 100px; /* reduce padding for smaller screens */
+  }
+  .video-card {
+    width: calc(33.33% - 20px); /* keep the same width for 3 cards in a row */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #video {
+    padding: 20px 50px; /* reduce padding for smaller screens */
+  }
+  .video-card {
+    width: calc(50% - 20px); /* adjust the width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #video {
+    padding: 10px 20px; /* reduce padding for mobile screens */
+  }
+  .video-card {
+    width: 100%; /* make the cards full-width on mobile */
+    margin: 10px 0; /* add margin to separate the cards */
+  }
+}
+
+
+
+
+
+
+
+
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: transparent;
+}
+
+/* --------------------glow button--------------- */
+.glow2-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #202020;
+  background: #d6ff00;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: transform 0.3s ease-in-out;
+  animation: breath 2s infinite ease-in-out; /* Add breathing animation */
+  animation-play-state: running; /* Ensure animation runs by default */
+
+  /* Initial state: slightly bent horizontally */
+  transform: perspective(600px) rotateY(10deg); /* Initial horizontal bend */
+}
+
+.glow2-button:hover {
+  transform: perspective(600px) rotateY(0deg); /* Straightens on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth on hover */
+}
+
+@keyframes breath {
+  0%, 100% {
+    background-color: #d6ff00; /* Breath in */
+    color: #131212; /* Text becomes grey-black */
+  }
+  50% {
+    background-color: #131212; /* Breath out (invert) */
+    color: #d6ff00; /* Inverted text color */
+  }
+}
+
+/* Media query to disable 3D effect on touch devices */
+@media (hover: none) {
+  .glow2-button {
+    transform: none; /* Remove 3D transform on touch devices */
+  }
+}
+
+
+
+
+@media (hover: none) {
+  .brand .brand-item .brand-img {
+      filter: none; /* Remove grayscale effect on touch devices */
+  }
+}
+
+
+#heroCarousel img {
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensure the image covers the container */
+  object-position: center; /* Center the image */
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
